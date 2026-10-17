@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inbox-injection-sanitizer"
+version = "1.0.0"
+description = "Strip and surface hidden machine-readable instructions in emails before AI summarizers see them (stdlib only)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+inbox-injection-sanitizer = "inbox_injection_sanitizer:main"
+
+[tool.setuptools]
+py-modules = ["inbox_injection_sanitizer"]
